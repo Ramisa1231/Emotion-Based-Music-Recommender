@@ -52,27 +52,28 @@ The system interprets user text input (e.g., “I feel peaceful today”) to ide
 
 ### 1. Clone the Repository
 
-git clone https://github.com/Ramisa1231/Emotion-Based-Music-Recommender.git
-cd Emotion-Based-Music-Recommender
+%cd /content ---
+!git clone https://github.com/Ramisa1231/Emotion-Based-Music-Recommender.git ---
+%cd Emotion-Based-Music-Recommender
 
 ### 2. Create a Virtual Environment
 
-python -m venv env
-source env/bin/activate  # Linux/Mac
+python -m venv env ---
+source env/bin/activate  # Linux/Mac ---
 env\Scripts\activate     # Windows
 
 ### 3. Install Dependencies
 
-pip install -r requirements.txt
+pip install -r requirements.txt ---
 
 ### 4. Run Migrations and Start the Server
 
-python manage.py migrate
+python manage.py migrate ---
 python manage.py runserver
 
 ### 5. (Optional) Run in Google Colab
 
-from pyngrok import ngrok
+from pyngrok import ngrok ---
 ngrok.connect(8000)
 
 Once it prints your public URL, open it in your browser to interact with the Django app.
