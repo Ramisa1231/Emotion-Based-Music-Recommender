@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Emotion-Based Music Recommender</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 30px; }
+    textarea { width: 80%; padding: 10px; }
+    table, th, td { border: 1px solid #ccc; border-collapse: collapse; padding: 6px; }
+  </style>
+</head>
+<body>
+  <h2>🎧 Emotion-Based Music Recommender</h2>
+  <form method="post">
+    {% csrf_token %}
+    <textarea name="journal_text" rows="3" placeholder="Type your thoughts...">{{ input_text }}</textarea><br>
+    <input type="submit" value="Recommend Music">
+  </form>
+
+  {% if emotion %}
+    <h3>Detected Emotion: {{ emotion }}</h3>
+    <table>
+      <tr><th>Track</th><th>Artist</th><th>Valence</th><th>Energy</th><th>Popularity</th></tr>
+      {% for song in recommendations %}
+      <tr>
+        <td>{{ song.track_name }}</td>
+        <td>{{ song.artist_name }}</td>
+        <td>{{ song.valence|floatformat:2 }}</td>
+        <td>{{ song.energy|floatformat:2 }}</td>
+        <td>{{ song.popularity }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <h4>Evaluation Metrics</h4>
+    <ul>
+      <li>Diversity: {{ diversity }}</li>
+      <li>Novelty: {{ novelty }}</li>
+      <li>Emotion Match: {{ match }}</li>
+      <li>Correction Factor: {{ correction }}</li>
+      <li><b>Listener Satisfaction Score (LSS): {{ lss }}</b></li>
+    </ul>
+  {% endif %}
+</body>
+</html>
