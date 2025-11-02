@@ -84,6 +84,6 @@ python manage.py migrate <br>
 python manage.py runserver
 
 
-Once it prints your public URL, open it in your browser to interact with the Django app.
+Once the server starts, open the public url in your browser to interact with the Django app.
 
 
