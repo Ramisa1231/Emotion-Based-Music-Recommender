@@ -51,7 +51,7 @@ The system interprets user text input (e.g., “I feel peaceful today”) to ide
 ## 🧪 Setup Instructions
 
 ### 1. Clone the Repository
-```bash
+
 git clone https://github.com/Ramisa1231/Emotion-Based-Music-Recommender.git
 cd Emotion-Based-Music-Recommender
 
