@@ -55,23 +55,23 @@ The system interprets user text input (e.g., “I feel peaceful today”) to ide
 git clone https://github.com/Ramisa1231/Emotion-Based-Music-Recommender.git
 cd Emotion-Based-Music-Recommender
 
-### 2️. Create a Virtual Environment
-```bash
+### 2. Create a Virtual Environment
+
 python -m venv env
 source env/bin/activate  # Linux/Mac
 env\Scripts\activate     # Windows
 
 ### 3. Install Dependencies
-```bash
+
 pip install -r requirements.txt
 
 ### 4. Run Migrations and Start the Server
-```bash
+
 python manage.py migrate
 python manage.py runserver
 
-### 4. (Optional) Run in Google Colab
-```bash
+### 5. (Optional) Run in Google Colab
+
 from pyngrok import ngrok
 ngrok.connect(8000)
 
