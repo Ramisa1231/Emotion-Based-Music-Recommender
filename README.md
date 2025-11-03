@@ -66,22 +66,25 @@ env\Scripts\activate     # Windows
 
 pip install -r requirements.txt <br>
 
-### 4. Create an account in ngrok
+
+### 4. Run Migrations and Start the Server
+
+python manage.py migrate <br>
+python manage.py runserver
+
+### 5. Create an account in ngrok
 go to https://dashboard.ngrok.com/get-started/setup/windows <br>
 click Your Authtoken <br>
 Copy your Authtoken
 
-### 5.  Run in Google Colab
+### 6.  Run in Google Colab
 
 !ngrok config add-authtoken paste your token here <br>
 from pyngrok import ngrok  <br>
 public_url = ngrok.connect(8000).public_url <br>
 print("🌍 Public Django URL:", public_url) <br>
 
-### 6. Run Migrations and Start the Server
 
-python manage.py migrate <br>
-python manage.py runserver
 
 
 Once the server starts, open the public url in your browser to interact with the Django app.
